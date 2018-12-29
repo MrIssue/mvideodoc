@@ -1,0 +1,53 @@
+{
+  "title": "mvideo",
+  "author": "MyIssue",
+  "language": "zh-hans",
+  "plugins": [
+    "disqus",
+    "github",
+    "donate",
+    "-sharing",
+    "sharing-plus"
+  ],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "mvideo"
+    },
+    "github": {
+      "url": ""
+    },
+    "donate": {
+      "wechat": "",
+      "alipay": "",
+      "title": "捐赠我们",
+      "button": "点击捐赠：点击捐赠",
+      "alipayText": "默认值：支付宝捐赠",
+      "wechatText": "默认值：微信捐赠"
+    },
+    "sharing": {
+      "douban": true,
+      "facebook": false,
+      "google": false,
+      "hatenaBookmark": false,
+      "instapaper": false,
+      "line": false,
+      "linkedin": true,
+      "messenger": false,
+      "pocket": true,
+      "qq": true,
+      "qzone": false,
+      "stumbleupon": false,
+      "twitter": true,
+      "viber": false,
+      "vk": false,
+      "weibo": true,
+      "whatsapp": false,
+      "all": [
+        "facebook", "google", "twitter",
+        "weibo", "instapaper", "linkedin",
+        "pocket", "stumbleupon"
+      ]
+    }
+
+  }
+}
