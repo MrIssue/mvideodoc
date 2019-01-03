@@ -215,6 +215,7 @@
 <tr>
 <th style="text-align:center">&#x53C2;&#x6570;</th>
 <th style="text-align:center">&#x8BF4;&#x660E;</th>
+<th style="text-align:center">&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
 <th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
 </tr>
 </thead>
@@ -222,98 +223,392 @@
 <tr>
 <td style="text-align:center">id</td>
 <td style="text-align:center">&#x4E13;&#x9898;id,&#x5B58;&#x5728;&#x65F6;&#x4E3A;&#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x4E13;&#x9898;&#x8BE6;&#x60C5;</td>
+<td style="text-align:center">int</td>
 <td style="text-align:center">&#x5426;</td>
 </tr>
 </tbody>
 </table>
 <h5 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;</h5>
-<pre><code class="lang-$json">&#x4E0D;&#x5B58;&#x5728;id:
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+<th style="text-align:center">&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">&#x4E13;&#x9898;ID</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">&#x4E13;&#x9898;&#x540D;&#x79F0;</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">description</td>
+<td style="text-align:center">&#x4E13;&#x9898;&#x4ECB;&#x7ECD;</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">N</td>
+</tr>
+<tr>
+<td style="text-align:center">sort</td>
+<td style="text-align:center">&#x4E13;&#x9898;&#x6743;&#x91CD;</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">video_num</td>
+<td style="text-align:center">&#x4E13;&#x9898;&#x4E0B;&#x89C6;&#x9891;&#x6570;&#x91CF;</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">subtopics</td>
+<td style="text-align:center">&#x5B50;&#x4E13;&#x9898;</td>
+<td style="text-align:center">array</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5B58;&#x5728;ID&#xFF0C;videos&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+<th style="text-align:center">&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">&#x89C6;&#x9891;ID</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">user_id</td>
+<td style="text-align:center">&#x4E0A;&#x4F20;&#x7528;&#x6237;ID</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">topic_id</td>
+<td style="text-align:center">&#x4E13;&#x9898;ID</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">subtopic_id</td>
+<td style="text-align:center">&#x5B50;&#x4E13;&#x9898;ID</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">title</td>
+<td style="text-align:center">&#x89C6;&#x9891;&#x6807;&#x9898;</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">description</td>
+<td style="text-align:center">&#x89C6;&#x9891;&#x63CF;&#x8FF0;</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">url</td>
+<td style="text-align:center">&#x89C6;&#x9891;&#x94FE;&#x63A5;</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">pic</td>
+<td style="text-align:center">&#x89C6;&#x9891;&#x5FEB;&#x7167;&#x94FE;&#x63A5;</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">time</td>
+<td style="text-align:center">&#x89C6;&#x9891;&#x65F6;&#x957F;</td>
+<td style="text-align:center">&#x5355;&#x4F4D;:s</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">play_counts</td>
+<td style="text-align:center">&#x64AD;&#x653E;&#x6B21;&#x6570;</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">comment_couts</td>
+<td style="text-align:center">&#x8BC4;&#x8BBA;&#x6570;&#x91CF;</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">keywords</td>
+<td style="text-align:center">&#x5173;&#x952E;&#x8BCD;</td>
+<td style="text-align:center">array</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">labels</td>
+<td style="text-align:center">&#x6807;&#x7B7E;</td>
+<td style="text-align:center">array</td>
+<td style="text-align:center">Y</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-json">&#x4E0D;&#x5B58;&#x5728;id:
 {
-    &quot;code&quot;: 200,
-    &quot;data&quot;: [
+    <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-number">200</span>,
+    <span class="hljs-string">&quot;data&quot;</span>: [
         {
-            &quot;id&quot;: 1,
-            &quot;name&quot;: &quot;&#x7535;&#x89C6;&#x5267;&quot;,
-            &quot;description&quot;: &quot;&#x5404;&#x79CD;&#x7535;&#x89C6;&#x5267;&quot;,
-            &quot;sort&quot;: 88,
-            &quot;status&quot;: 2,
-            &quot;video_num&quot;: 0,
-            &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2018-12-29 02:19:37&quot;,
-            &quot;updated_at&quot;: &quot;2018-12-29 02:19:37&quot;,
-            &quot;subtopics&quot;: [
+            <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x7535;&#x89C6;&#x5267;&quot;</span>,
+            <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#x5404;&#x79CD;&#x7535;&#x89C6;&#x5267;&quot;</span>,
+            <span class="hljs-string">&quot;sort&quot;</span>: <span class="hljs-number">88</span>,
+            <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-string">&quot;video_num&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">&quot;deleted_at&quot;</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:37&quot;</span>,
+            <span class="hljs-string">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:37&quot;</span>,
+            <span class="hljs-string">&quot;subtopics&quot;</span>: [
                 {
-                    &quot;id&quot;: 1,
-                    &quot;topic_id&quot;: 1,
-                    &quot;name&quot;: &quot;&#x5B50;&#x4E13;&#x9898;&quot;,
-                    &quot;description&quot;: &quot;&#x5B50;&#x4E13;&#x9898;&#x4ECB;&#x7ECD;&quot;,
-                    &quot;sort&quot;: 99,
-                    &quot;status&quot;: 1,
-                    &quot;video_num&quot;: 0,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2018-12-29 02:19:37&quot;,
-                    &quot;updated_at&quot;: &quot;2018-12-29 02:19:37&quot;
+                    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;topic_id&quot;</span>: <span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5B50;&#x4E13;&#x9898;&quot;</span>,
+                    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#x5B50;&#x4E13;&#x9898;&#x4ECB;&#x7ECD;&quot;</span>,
+                    <span class="hljs-string">&quot;sort&quot;</span>: <span class="hljs-number">99</span>,
+                    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;video_num&quot;</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">&quot;deleted_at&quot;</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-string">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:37&quot;</span>,
+                    <span class="hljs-string">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:37&quot;</span>
                 }
             ]
         },
         {
-            &quot;id&quot;: 2,
-            &quot;name&quot;: &quot;&#x7535;&#x89C6;&#x5267;&quot;,
-            &quot;description&quot;: &quot;&#x5404;&#x79CD;&#x7535;&#x89C6;&#x5267;&quot;,
-            &quot;sort&quot;: 88,
-            &quot;status&quot;: 2,
-            &quot;video_num&quot;: 0,
-            &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2018-12-29 02:19:52&quot;,
-            &quot;updated_at&quot;: &quot;2018-12-29 02:19:52&quot;,
-            &quot;subtopics&quot;: [
+            <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x7535;&#x89C6;&#x5267;&quot;</span>,
+            <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#x5404;&#x79CD;&#x7535;&#x89C6;&#x5267;&quot;</span>,
+            <span class="hljs-string">&quot;sort&quot;</span>: <span class="hljs-number">88</span>,
+            <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-string">&quot;video_num&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">&quot;deleted_at&quot;</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:52&quot;</span>,
+            <span class="hljs-string">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:52&quot;</span>,
+            <span class="hljs-string">&quot;subtopics&quot;</span>: [
                 {
-                    &quot;id&quot;: 2,
-                    &quot;topic_id&quot;: 2,
-                    &quot;name&quot;: &quot;&#x5B50;&#x4E13;&#x9898;&quot;,
-                    &quot;description&quot;: &quot;&#x5B50;&#x4E13;&#x9898;&#x4ECB;&#x7ECD;&quot;,
-                    &quot;sort&quot;: 99,
-                    &quot;status&quot;: 1,
-                    &quot;video_num&quot;: 0,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2018-12-29 02:19:52&quot;,
-                    &quot;updated_at&quot;: &quot;2018-12-29 02:19:52&quot;
+                    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">2</span>,
+                    <span class="hljs-string">&quot;topic_id&quot;</span>: <span class="hljs-number">2</span>,
+                    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5B50;&#x4E13;&#x9898;&quot;</span>,
+                    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#x5B50;&#x4E13;&#x9898;&#x4ECB;&#x7ECD;&quot;</span>,
+                    <span class="hljs-string">&quot;sort&quot;</span>: <span class="hljs-number">99</span>,
+                    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;video_num&quot;</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">&quot;deleted_at&quot;</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-string">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:52&quot;</span>,
+                    <span class="hljs-string">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:52&quot;</span>
                 }
             ]
         }
     ],
-    &quot;msg&quot;: &quot;&quot;
+    <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
 }
 &#x5B58;&#x5728;id:
 {
-    &quot;code&quot;: 200,
-    &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;&#x7535;&#x89C6;&#x5267;&quot;,
-        &quot;description&quot;: &quot;&#x5404;&#x79CD;&#x7535;&#x89C6;&#x5267;&quot;,
-        &quot;sort&quot;: 88,
-        &quot;status&quot;: 2,
-        &quot;video_num&quot;: 0,
-        &quot;deleted_at&quot;: null,
-        &quot;created_at&quot;: &quot;2018-12-29 02:19:37&quot;,
-        &quot;updated_at&quot;: &quot;2018-12-29 02:19:37&quot;,
-        &quot;subtopics&quot;: [
+    <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-number">200</span>,
+    <span class="hljs-string">&quot;data&quot;</span>: {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x7535;&#x89C6;&#x5267;&quot;</span>,
+        <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#x5404;&#x79CD;&#x7535;&#x89C6;&#x5267;&quot;</span>,
+        <span class="hljs-string">&quot;sort&quot;</span>: <span class="hljs-number">88</span>,
+        <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-string">&quot;video_num&quot;</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-string">&quot;deleted_at&quot;</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-string">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:37&quot;</span>,
+        <span class="hljs-string">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:37&quot;</span>,
+        <span class="hljs-string">&quot;subtopics&quot;</span>: [
             {
-                &quot;id&quot;: 1,
-                &quot;topic_id&quot;: 1,
-                &quot;name&quot;: &quot;&#x5B50;&#x4E13;&#x9898;&quot;,
-                &quot;description&quot;: &quot;&#x5B50;&#x4E13;&#x9898;&#x4ECB;&#x7ECD;&quot;,
-                &quot;sort&quot;: 99,
-                &quot;status&quot;: 1,
-                &quot;video_num&quot;: 0,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2018-12-29 02:19:37&quot;,
-                &quot;updated_at&quot;: &quot;2018-12-29 02:19:37&quot;
+                <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;topic_id&quot;</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5B50;&#x4E13;&#x9898;&quot;</span>,
+                <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#x5B50;&#x4E13;&#x9898;&#x4ECB;&#x7ECD;&quot;</span>,
+                <span class="hljs-string">&quot;sort&quot;</span>: <span class="hljs-number">99</span>,
+                <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;video_num&quot;</span>: <span class="hljs-number">0</span>,
+                <span class="hljs-string">&quot;deleted_at&quot;</span>: <span class="hljs-literal">null</span>,
+                <span class="hljs-string">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:37&quot;</span>,
+                <span class="hljs-string">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2018-12-29 02:19:37&quot;</span>
             }
         ],
-        &quot;videos&quot;: []
+        <span class="hljs-string">&quot;videos&quot;</span>: []
     },
-    &quot;msg&quot;: &quot;&quot;
+    <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+}
+</code></pre>
+<h3 id="&#x89C6;&#x9891;&#x76F8;&#x5173;"><span id="video">&#x89C6;&#x9891;&#x76F8;&#x5173;</span></h3>
+<blockquote>
+<h4 id="&#x83B7;&#x53D6;&#x89C6;&#x9891;&#x8BE6;&#x60C5;">&#x83B7;&#x53D6;&#x89C6;&#x9891;&#x8BE6;&#x60C5;</h4>
+<p><code>GET /videos/{id}</code></p>
+</blockquote>
+<h5 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+<th style="text-align:center">&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">&#x89C6;&#x9891;id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+</tbody>
+</table>
+<h5 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+<th style="text-align:center">&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">&#x89C6;&#x9891;id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">user_id</td>
+<td style="text-align:center">&#x4E0A;&#x4F20;&#x7528;&#x6237;id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">topic_id</td>
+<td style="text-align:center">&#x4E3B;&#x4E13;&#x9898;id</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">subtopic_id</td>
+<td style="text-align:center">&#x5B50;&#x4E13;&#x9898;ID</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">title</td>
+<td style="text-align:center">&#x89C6;&#x9891;&#x6807;&#x9898;</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">description</td>
+<td style="text-align:center">&#x89C6;&#x9891;&#x4ECB;&#x7ECD;</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">N</td>
+</tr>
+<tr>
+<td style="text-align:center">url</td>
+<td style="text-align:center">&#x89C6;&#x9891;&#x94FE;&#x63A5;</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">pic</td>
+<td style="text-align:center">&#x89C6;&#x9891;&#x5C01;&#x9762;&#x94FE;&#x63A5;</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">time</td>
+<td style="text-align:center">&#x89C6;&#x9891;&#x65F6;&#x957F;</td>
+<td style="text-align:center">&#x5355;&#x4F4D;:s</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">play_counts</td>
+<td style="text-align:center">&#x64AD;&#x653E;&#x6B21;&#x6570;</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">comment_couts</td>
+<td style="text-align:center">&#x8BC4;&#x8BBA;&#x6570;&#x91CF;</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">keywords</td>
+<td style="text-align:center">&#x5173;&#x952E;&#x8BCD;</td>
+<td style="text-align:center">array</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">labels</td>
+<td style="text-align:center">&#x6807;&#x7B7E;</td>
+<td style="text-align:center">array</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">created_at</td>
+<td style="text-align:center">&#x4E0A;&#x4F20;&#x65F6;&#x95F4;</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">updated_at</td>
+<td style="text-align:center">&#x66F4;&#x65B0;&#x65F6;&#x95F4;</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:center">Y</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-number">200</span>,
+    <span class="hljs-string">&quot;data&quot;</span>: {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;user_id&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;topic_id&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;subtopic_id&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Saepe et est.&quot;</span>,
+        <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;ZZ53ZnesBojrrnO9&quot;</span>,
+        <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://cormier.com/a-libero-ducimus-rerum-facere-neque.html&quot;</span>,
+        <span class="hljs-string">&quot;pic&quot;</span>: <span class="hljs-string">&quot;http://howe.com/blanditiis-nostrum-dolor-eveniet-nulla-eius.html&quot;</span>,
+        <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-number">14366</span>,
+        <span class="hljs-string">&quot;play_counts&quot;</span>: <span class="hljs-number">745</span>,
+        <span class="hljs-string">&quot;comment_counts&quot;</span>: <span class="hljs-number">88226171</span>,
+        <span class="hljs-string">&quot;keywords&quot;</span>: [
+            <span class="hljs-string">&quot;Mrs.&quot;</span>,
+            <span class="hljs-string">&quot;Miss&quot;</span>
+        ],
+        <span class="hljs-string">&quot;labels&quot;</span>: [
+            <span class="hljs-string">&quot;Arvilla Hermiston II&quot;</span>,
+            <span class="hljs-string">&quot;Gayle Reichert&quot;</span>
+        ],
+        <span class="hljs-string">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;2019-01-03 08:00:52&quot;</span>,
+        <span class="hljs-string">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;2019-01-03 08:00:52&quot;</span>
+    },
+    <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
 }
 </code></pre>
 
@@ -355,7 +650,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"前台API","level":"1.2","depth":1,"next":{"title":"首页","level":"1.2.1","depth":2,"ref":"","articles":[]},"previous":{"title":"介绍","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","github","donate","-sharing","sharing-plus","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"mvideo"},"github":{"url":""},"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"默认值：支付宝捐赠","button":"点击捐赠：点击捐赠","title":"捐赠我们","wechat":"","wechatText":"默认值：微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"MyIssue","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"mvideo","language":"zh-hans","gitbook":"*"},"file":{"path":"API/FrontAPI.md","mtime":"2018-12-29T02:21:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-29T02:21:51.985Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"前台API","level":"1.2","depth":1,"next":{"title":"首页","level":"1.2.1","depth":2,"ref":"","articles":[]},"previous":{"title":"介绍","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","github","donate","-sharing","sharing-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"mvideo"},"github":{"url":""},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"默认值：支付宝捐赠","button":"点击捐赠：点击捐赠","title":"捐赠我们","wechat":"","wechatText":"默认值：微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"MyIssue","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"mvideo","language":"zh-hans","gitbook":"*"},"file":{"path":"API/FrontAPI.md","mtime":"2019-01-03T09:20:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-03T08:55:49.783Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -382,10 +677,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
